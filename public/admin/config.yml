@@ -1,0 +1,205 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+# publish_mode: editorial_workflow # Allows you to save drafts before publishing them
+media_folder: public/assets # Media files will be stored in the repo under static/uploads
+public_folder: /assets # The src attribute for uploaded media will begin with /uploads
+locale: 'en'
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+
+  - name: "news" # Used in routes, e.g., /admin/collections/blog
+    label: "News" # Used in the UI
+    folder: "src/pages/news" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: title.en
+    fields: # The fields for each document, usually in front matter
+      - label: "Title"
+        name: "title"
+        widget: "object"
+        fields: 
+        - {label: "Title En", name: "en", widget: "string"}
+        - {label: "Title De", name: "de", widget: "string"}
+        - {label: "Title Hu", name: "hu", widget: "string"}
+      - {label: "Event Date", name: "date", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD HH:mm", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm" }
+      - label: "Featured Image"
+        name: "image"
+        widget: "object"
+        fields:
+        - {label: "Image", name: "src", widget: "image", required: false}
+        - label: "Caption"
+          name: "caption"
+          widget: "object"
+          fields:
+          - {label: "Caption En", name: "en", widget: "string", required: false}
+          - {label: "Caption De", name: "de", widget: "string", required: false}
+          - {label: "Caption Hu", name: "hu", widget: "string", required: false}
+      - label: "Content"
+        name: "content"
+        widget: "object"
+        fields:
+        - {label: "Content En", name: "en", widget: "markdown"}
+        - {label: "Content De", name: "de", widget: "markdown"}
+        - {label: "Content Hu", name: "hu", widget: "markdown"}
+      - {label: "Publish Date", name: "pub_date", widget: "datetime", format: "YYYY-MM-DD HH:mm", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm" }
+
+  - label: "Pages"
+    name: "pages"
+    files:
+
+      - label: "Landing Page"
+        name: "landing"
+        file: "site/pages/landing.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "object"
+            fields: 
+            - {label: "Title En", name: "en", widget: "string"}
+            - {label: "Title De", name: "de", widget: "string"}
+            - {label: "Title Hu", name: "hu", widget: "string"}
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+            - {label: "Content En", name: "en", widget: "markdown"}
+            - {label: "Content De", name: "de", widget: "markdown"}
+            - {label: "Content Hu", name: "hu", widget: "markdown"}
+            - label: "Image"
+              name: "image"
+              widget: "object"
+              fields:
+              - {label: "Image", name: "src", widget: "image"}
+              - label: "Caption"
+                name: "caption"
+                widget: "object"
+                fields:
+                - {label: "Caption En", name: "en", widget: "string"}
+                - {label: "Caption De", name: "de", widget: "string"}
+                - {label: "Caption Hu", name: "hu", widget: "string"}
+          - {label: "Body", name: "body", widget: "code", default_language: "svelte"}
+
+      - label: "About Page"
+        name: "about"
+        file: "site/pages/about.md"
+        fields:
+          - label: "Introduction"
+            name: "content"
+            widget: "object"
+            fields:
+            - {label: "Introduction En", name: "en", widget: "markdown"}
+            - {label: "Introduction De", name: "de", widget: "markdown"}
+            - {label: "Introduction Hu", name: "hu", widget: "markdown"}
+          - label: CV Timeline
+            name: cv
+            widget: list
+            fields:
+              - {label: "Date", name: "date", widget: "datetime", required: false, default: "", format: "YYYY", dateFormat: "YYYY", timeFormat: false }
+              - {label: Position, name: position, widget: string}
+              - {label: Location, name: location, widget: string}
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                - {label: "Image", name: "src", widget: "image"}
+                - label: "Caption"
+                  name: "caption"
+                  widget: "object"
+                  fields:
+                  - {label: "Caption En", name: "en", widget: "string"}
+                  - {label: "Caption De", name: "de", widget: "string"}
+                  - {label: "Caption Hu", name: "hu", widget: "string"}
+
+      - label: "Career Page"
+        name: "career"
+        file: "src/pages/career.md"
+        fields:
+          - label: "Summary"
+            name: "summary"
+            widget: "object"
+            fields:
+            - {label: "Summary En", name: "en", widget: "markdown"}
+            - {label: "Summary De", name: "de", widget: "markdown"}
+            - {label: "Summary Hu", name: "hu", widget: "markdown"}
+          - label: Timeline
+            name: timeline
+            widget: list
+            fields:
+              - {label: "Date from", name: "date", widget: "datetime", required: false, default: "", format: "YYYY", dateFormat: "YYYY", timeFormat: false }
+              - {label: "Date till", name: "date2", widget: "datetime", required: false, default: "", format: "YYYY", dateFormat: "YYYY", timeFormat: false }
+              - label: "Detail"
+                name: "detail"
+                widget: "object"
+                fields:
+                - {label: "Detail En", name: "en", widget: "markdown"}
+                - {label: "Detail De", name: "de", widget: "markdown"}
+                - {label: "Detail Hu", name: "hu", widget: "markdown"}
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                - {label: "Image", name: "src", widget: "image", required: false}
+                - label: "Caption"
+                  name: "caption"
+                  widget: "object"
+                  fields:
+                  - {label: "Caption En", name: "en", widget: "string", required: false}
+                  - {label: "Caption De", name: "de", widget: "string", required: false}
+                  - {label: "Caption Hu", name: "hu", widget: "string", required: false}
+                - {label: "Link", name: "link", widget: "string", required: false}
+                - {label: "Hero", name: "hero", widget: "boolean", required: false}
+                - {label: "Preview", name: "preview", widget: "boolean", required: false}
+
+      - label: "Photos"
+        name: "photos"
+        label_singular: "Photo"
+        file: "site/pages/photos.md"
+        fields:
+          - label: Photos
+            name: photos
+            widget: list
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                - {label: "Image", name: "src", widget: "image"}
+                - label: "Caption"
+                  name: "caption"
+                  widget: "object"
+                  fields:
+                  - {label: "Caption En", name: "en", widget: "string"}
+                  - {label: "Caption De", name: "de", widget: "string"}
+                  - {label: "Caption Hu", name: "hu", widget: "string"}
+              - {label: Location, name: location, widget: string, required: false}
+              - {label: "Date", name: "date", widget: "datetime", required: false, default: "", format: "YYYY", dateFormat: "YYYY", timeFormat: false }
+
+      - label: "Critics"
+        name: "critics"
+        file: "site/pages/critics.md"
+        identifier_field: title.en
+        fields:
+          - label: "Critics"
+            label_singular: "Critic"
+            name: "critic"
+            widget: "list"
+            fields:
+              - label: "Quote (copy-paste all languages, please)"
+                name: "quote"
+                widget: "object"
+                fields:
+                - {label: "Quote En", name: "en", widget: "string"}
+                - {label: "Quote De", name: "de", widget: "string"}
+                - {label: "Quote Hu", name: "hu", widget: "string"}
+              - label: "Source"
+                name: "title"
+                widget: "string"
+              - {label: "Date", name: "date", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+              - label: "File"
+                name: src
+                widget: file

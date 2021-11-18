@@ -1,0 +1,108 @@
+---
+import Layout from '$layouts/Layout.astro'
+//import Page from '$layouts/Page.astro'
+import Image from '$lib/Image.astro'
+import { Markdown } from 'astro/components'
+// Component Imports
+// import Header from '$lib/Header.astro'
+// You can import components from any supported Framework here!
+
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+
+const { posts, summaryfrom, title, subtitle, summary, image, folder, content } = Astro.props
+//console.log(posts)
+//console.log('MOZAIK', Astro.props)
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<Layout {...Astro.props} meta={title || content?.title}>
+{(title || content?.title) && (
+<h1>{title || content?.title}</h1>
+)}
+<Image folder={folder || content?.folder} image={image || content?.image}/>
+{(subtitle || content?.subtitle) && (
+<h2>{subtitle || content?.subtitle}</h2>
+)}
+{(summary || content?.summary) && (
+  <h6><Markdown content={summary || content?.summary}/></h6>
+)}
+<main>
+{posts.map((item) => (
+  <a href={item.weblink || item.url}>
+    <aside>
+      <h1>{item.title}</h1>
+      {item.image && <Image folder={item.folder} image={item.image}/>}
+      {item.subtitle && <h3>{item.subtitle}</h3>}
+      {item.summary && <p>{item.summary}</p>}
+      {(summaryfrom == 'auto' && !item.summary) && (
+        item.astro.html
+      )}
+    </aside>
+    <button>[…]</button>
+  </a>
+))}
+</main>
+<article>
+  <slot/>
+</article>
+</Layout>
+
+<style>
+  a {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 64ch;
+    min-width: 50%;
+    margin-bottom: -10vh;
+    padding: 4vh 4vw 12vh;
+    box-sizing: content-box;
+    transition: all .25s;
+    position: relative;
+    display: block;
+  }
+  a:hover {
+    transform: scale(1.05);
+  }
+  main > *:nth-child(odd) {
+    background-color:lightblue;
+    margin-left: auto;
+  }
+  main > *:nth-child(even) {
+    background-color: aliceblue;
+    margin-right: auto;
+  }
+  a:last-child {
+    padding-bottom: 5vh;
+  }
+  /*aside {
+    position: relative;
+  }*/
+  a:last-child > button {
+    bottom: 3vh;
+  }
+  a:nth-child(odd) > button {
+    right: 4vw;
+  }
+  a:nth-child(even) > button {
+    left: 4vw;
+  }
+
+  h6 {
+    margin-bottom: var(--spacer);
+    padding: 2vh 4vw;
+  }
+  blockquote {
+    border-bottom: 2px solid;
+  }
+  button {
+    position: absolute;
+    bottom: 8vh;
+  }
+
+</style>

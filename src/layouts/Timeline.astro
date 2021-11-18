@@ -1,0 +1,84 @@
+---
+import Layout from '$layouts/Layout.astro'
+import Image from '../lib/Image.astro'
+import Debug from 'astro/debug'
+
+/*export let post, lang = 'hu'*/
+const { title, subtitle, summary, image, folder, content } = Astro.props
+let lang = 'hu'
+const { timeline } = content
+//console.log('CARREER', image)
+//const { html } = content.astro
+---
+<!--<Debug {content} />-->
+<Layout {...Astro.props} meta={title || content?.title}>
+<main>
+  <main>
+  {(title || content?.title) && (
+  <h1>{title || content?.title}</h1>
+  )}
+  <Image folder={folder || content?.folder} image={image || content?.image}/>
+  {(subtitle || content?.subtitle) && (
+  <h2>{subtitle || content?.subtitle}</h2>
+  )}
+  {(summary || content?.summary) && (
+    <h6><em>{summary || content?.summary}</em></h6>
+  )}
+  </main>
+	{timeline && <dl>
+	{timeline.map(item => (
+		<Fragment>
+		<dt><date>{item.date}{item.date2 ? '–' + item.date2 : ''}</date></dt>
+		<dd lang={lang}>
+			{item.detail[lang]}
+			{item.image && <Image folder={content.folder} image={item.image}/>}
+		</dd>
+		</Fragment>
+	))}
+	</dl>}
+</main>
+<article>
+	<slot/>
+</article>
+</Layout>
+
+<style>
+	dl {
+		--figurewidth: 32ch;
+		margin-top: 2rem;
+	}
+	dl p {
+		display: none;
+	}
+	/* p { font-weight: bold; } */
+	dl {
+		display: grid;
+		grid-template-columns: 12ch 1fr;
+		gap: 0 var(--gutter);
+		border-left: dotted 4px;
+    margin-left: 12ch;
+	}
+	dt {
+		position: relative;
+		text-align: right;
+		padding: 0 var(--gutter) var(--gutter) 0;
+		margin-left: -12ch;
+		width: 12ch;
+	}
+	dt::after {
+		content: '';
+		position: absolute;
+		margin-right: 2px;
+		top: var(--gutterx);
+		right: var(--gutterx-);
+		width: var(--gutter);
+		height: var(--gutter);
+		border-radius: var(--gutterx);
+		border-width: var(--gutterz);
+    background-color: white;
+	}
+	dd {
+		margin-left: -12ch;
+    padding-bottom: var(--gutter2);
+	}
+</style>

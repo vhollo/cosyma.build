@@ -1,0 +1,92 @@
+<header>
+  <div>
+    <a href="/">
+      <img src="/assets/csh_logo_notext.svg" alt="" style="fill:#fff"/>
+    </a>
+    <a href="/">
+      <h1>Collegium <span>Symphonicum</span> <span>Hungaricum</span></h1>
+    </a>
+    <nav>
+      <!--<div>HU | EN</div>-->
+      <ul>
+        <li><a href="/">CoSyMa</a></li>
+        <li><a href="/about">Rólunk</a></li>
+        <li><a href="/news">Hírek</a></li>
+        <li><a href="/">Jelentkezés</a></li>
+        <li><a href="/">Előadások</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    /*color: #000;
+    background-color: #fff;*/
+    background-image: url('/assets/header_red.png'), url('/assets/header_green.png');
+    background-position: top, bottom;
+    background-size: 100% 2rem, 100% 2rem, cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.15;
+  }
+  header div {
+    width: min(100%, 128ch);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  header div > a:first-of-type {
+    flex-grow: 0;
+    padding-left: 1rem;
+  }
+  header div > a:last-of-type {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+  }
+  header div > a img {
+    display: block;
+    width: 3rem;
+    padding: 0 0 2rem;
+    margin: -.5rem 0 .5rem;
+  }
+  header h1 {
+    /*font-family: serif;*/
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    margin: 0;
+  }
+  header h1 span {
+    display: block;
+  }
+  header nav {
+    /*flex-grow: 1;*/
+    background-image: url('/assets/header_notes_wide.png');
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-block: -1rem;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  }
+  nav ul li {
+    padding-inline-end: 2rem;
+    font-size: larger;
+  }
+  header a {
+    display: block;
+  }
+</style>

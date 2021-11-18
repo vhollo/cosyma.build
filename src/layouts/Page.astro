@@ -1,0 +1,51 @@
+---
+// Component Imports
+import Layout from '$layouts/Layout.astro'
+import Image from '../lib/Image.astro'
+//import Debug from 'astro/debug'
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+
+let lang = 'hu'
+const { title, subtitle, summary, image, folder, content } = Astro.props
+//console.log('PAGE',content.image)
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<!--
+  - You can also use imported framework components directly in your markup!
+  -
+  - Note: by default, these components are NOT interactive on the client.
+  - The `:visible` directive tells Astro to make it interactive.
+  -
+  - See https://docs.astro.build/core-concepts/component-hydration/ 
+-->
+
+<Layout {...Astro.props} meta={title || content?.title}>
+<main>
+  {(title || content?.title) && (
+  <h1>{title || content?.title}</h1>
+  )}
+  <Image folder={folder || content?.folder} image={image || content?.image}/>
+  {(subtitle || content?.subtitle) && (
+  <h2>{subtitle || content?.subtitle}</h2>
+  )}
+  {(summary || content?.summary) && (
+    <h6>{summary || content?.summary}</h6>
+  )}
+</main>
+<article>
+  <slot/>
+</article>
+</Layout>
+
+<style>
+  h6 {
+    font-size: 1.25em;
+    font-style: italic;
+  }
+</style>
