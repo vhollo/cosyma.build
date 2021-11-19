@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  repo: vhollo/cosyma.build
+  site_url: https://cosyma-build.netlify.app
+  branch: main # Branch to update (optional; defaults to master)
 # publish_mode: editorial_workflow # Allows you to save drafts before publishing them
 media_folder: public/assets # Media files will be stored in the repo under static/uploads
 public_folder: /assets # The src attribute for uploaded media will begin with /uploads
