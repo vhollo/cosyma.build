@@ -1,5 +1,5 @@
 ---
-import Layout from '$layouts/Layout.astro'
+import Page from '$layouts/Page.astro'
 import Image from '../lib/Image.astro'
 import Debug from 'astro/debug'
 
@@ -11,10 +11,9 @@ const { timeline } = content
 //const { html } = content.astro
 ---
 <!--<Debug {content} />-->
-<Layout {...Astro.props} meta={title || content?.title}>
+<Page {...Astro.props} meta={title || content?.title}>
 <main>
-  <main>
-  {(title || content?.title) && (
+  <!--{(title || content?.title) && (
   <h1>{title || content?.title}</h1>
   )}
   <Image folder={folder || content?.folder} image={image || content?.image}/>
@@ -23,8 +22,7 @@ const { timeline } = content
   )}
   {(summary || content?.summary) && (
     <h6><em>{summary || content?.summary}</em></h6>
-  )}
-  </main>
+  )}-->
 	{timeline && <dl>
 	{timeline.map(item => (
 		<Fragment>
@@ -40,17 +38,17 @@ const { timeline } = content
 <article>
 	<slot/>
 </article>
-</Layout>
+</Page>
 
 <style>
 	dl {
 		--figurewidth: 32ch;
 		margin-top: 2rem;
 	}
-	dl p {
+	/*dl p {
 		display: none;
-	}
-	/* p { font-weight: bold; } */
+	}*/
+	 p { font-weight: bold; } 
 	dl {
 		display: grid;
 		grid-template-columns: 12ch 1fr;

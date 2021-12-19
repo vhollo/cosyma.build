@@ -8,5 +8,5 @@ image:
   src: Tanari-kar-SH.jpg
   hero: true
   preview: true
-index: true
+index: double
 ---

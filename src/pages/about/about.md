@@ -3,6 +3,7 @@ date: 0000-01-00
 title: Küldetésünk
 folder: about
 layout: $layouts/Page.astro
+published: false
 image:
   - src: 20181024hamar-zsolt-filharmonikusok-zene2.jpg
     hero: true

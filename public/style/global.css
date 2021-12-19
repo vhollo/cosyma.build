@@ -59,12 +59,13 @@ body {
 }*/
 
 main {
-  width: min(100%, 96ch);
+  width: min(100%, 116ch);
   margin-inline: auto;
   line-height: 1.65;
   display: flex;
+  /*flex-wrap: wrap;*/
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   padding: var(--spacer) var(--gutter) var(--gutter);
 }
 article {
@@ -113,14 +114,17 @@ b, strong {
   font-weight: lighter;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   /* font-family: system-ui, sans-serif; */
   font-family: "SilkSerif-Regular", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.25em;
   margin: .67em auto;
   color: var(--midtone, #1f4667);
 }
-h1 {
+/*h1 {
   font-size: 2.5rem;
 }
 h2 {
@@ -140,7 +144,7 @@ h5 {
 
 h6 {
   font-size: 1rem;
-}
+}*/
 
 p, ul, ol, dl, figure {
   margin: 0.67em 0;

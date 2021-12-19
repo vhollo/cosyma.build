@@ -21,6 +21,7 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 <Layout {...Astro.props} meta={title || content?.title}>
+
 {(title || content?.title) && (
 <h1>{title || content?.title}</h1>
 )}
@@ -29,54 +30,72 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
 <h2>{subtitle || content?.subtitle}</h2>
 )}
 {(summary || content?.summary) && (
-  <h6><Markdown content={summary || content?.summary}/></h6>
+  <h4><Markdown content={summary || content?.summary}/></h4>
 )}
-<main>
-{posts.map((item) => (
-  <a href={item.weblink || item.url}>
-    <aside>
-      <h1>{item.title}</h1>
-      {item.image && <Image folder={item.folder} image={item.image}/>}
-      {item.subtitle && <h3>{item.subtitle}</h3>}
-      {item.summary && <p>{item.summary}</p>}
-      {(summaryfrom == 'auto' && !item.summary) && (
-        item.astro.html
-      )}
-    </aside>
-    <button>[…]</button>
-  </a>
-))}
-</main>
+
 <article>
+  <!--<h1>ARTICLE</h1>-->
   <slot/>
 </article>
+
+<main>
+  {posts.map((item) => item.published !== false && (
+    <a href={item.weblink || item.url} class={item.index}>
+      <aside>
+        <h1>{item.title}</h1>
+        {item.image && <Image folder={item.folder} image={item.image}/>}
+        {item.subtitle && <h3>{item.subtitle}</h3>}
+        {item.summary && <p>{item.summary}</p>}
+        {(summaryfrom == 'auto' && !item.summary) && (
+          item.astro.html
+        )}
+      </aside>
+      <!-- <button>[…]</button> -->
+    </a>
+  ))}
+</main>
 </Layout>
 
 <style>
+  @media all and (min-width: 65ch) {
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(32ch, 1fr));
+      gap: 1.5rem;
+      grid-auto-flow: dense;
+    }
+  }
   a {
-    flex-basis: 100%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    width: 64ch;
-    min-width: 50%;
-    margin-bottom: -10vh;
-    padding: 4vh 4vw 12vh;
+    /*flex-basis: 100%;*/
+    /*width: 64ch;*/
+    /*flex-grow: 1;
+    flex-shrink: 0;*/
+    /*width: 0;
+    min-width: 32%;*/
+
+    /*margin-bottom: -5vh;*/
+    padding: 0 1vw /*12vh*/;
     box-sizing: content-box;
     transition: all .25s;
     position: relative;
     display: block;
+
+    background-color: aliceblue;
+  }
+  a.double {
+    grid-column-end: span 2;
   }
   a:hover {
     transform: scale(1.05);
   }
-  main > *:nth-child(odd) {
+  /*main > *:nth-child(odd) {
     background-color:lightblue;
     margin-left: auto;
   }
   main > *:nth-child(even) {
     background-color: aliceblue;
     margin-right: auto;
-  }
+  }*/
   a:last-child {
     padding-bottom: 5vh;
   }
@@ -93,16 +112,16 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
     left: 4vw;
   }
 
-  h6 {
+  h4 {
     /*margin-bottom: var(--spacer);*/
     padding: 2vh 4vw;
   }
   blockquote {
     border-bottom: 2px solid;
   }
-  button {
+  /*button {
     position: absolute;
     bottom: 8vh;
-  }
+  }*/
 
 </style>

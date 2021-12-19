@@ -1,3 +1,13 @@
 {
-  "moduleResolution": "node"
+  "moduleResolution": "node",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "$lib/*": ["./src/lib/*"],
+      "$layouts/*": ["./src/layouts/*"],
+      "$/*": ["./src/*"],
+    }
+  },
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
 }

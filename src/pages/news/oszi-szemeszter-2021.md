@@ -7,7 +7,7 @@ image:
   src: osztaly_bemutatasa-2048x1448.png
   hero: true
   preview: true
-index: true
+index: double
 summary: Tíz Ifjú Maestro nyert felvételt hamarosan induló kurzusunkra, akikkel már nagyon várjuk a közös munkát.
 ---
 A felvett Ifjú Maestro-k:

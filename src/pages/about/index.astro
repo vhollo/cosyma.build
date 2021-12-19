@@ -1,6 +1,6 @@
 ---
 import Mozaik from '$layouts/Mozaik.astro'
-//import Markdown from 'astro/components'
+import Markdown from 'astro/components'
 
 // Component Imports
 // import Header from '$lib/Header.astro'
@@ -13,8 +13,9 @@ import Mozaik from '$layouts/Mozaik.astro'
 // All variables are available to use in the HTML template below.
 
 const posts = Astro.fetchContent('./*.md').sort((a, b) => a.date?.localeCompare(b.date))
-//const firstPost = Astro.fetchContent('./kuldetesunk.md')
-//console.log(firstPost)
+const firstPost = Astro.fetchContent('./about.md')
+const post = firstPost[0]
+console.log({post})
 
 //const { content } = Astro.props
 // Full Astro Component Syntax:
@@ -36,5 +37,8 @@ const posts = Astro.fetchContent('./*.md').sort((a, b) => a.date?.localeCompare(
     <a href={post.url}>Read more</a>
   </article>
 ))}-->
-
-<Mozaik {posts} summaryfrom="auto"/>
+---
+<Mozaik {posts} summaryfrom="auto">
+  <h1>{post.title}</h1>
+  {post.astro.html}
+</Mozaik>

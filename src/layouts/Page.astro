@@ -2,6 +2,7 @@
 // Component Imports
 import Layout from '$layouts/Layout.astro'
 import Image from '../lib/Image.astro'
+import { Markdown } from 'astro/components'
 //import Debug from 'astro/debug'
 
 // Component Script:
@@ -38,14 +39,16 @@ const { title, subtitle, summary, image, folder, content } = Astro.props
     <h6>{summary || content?.summary}</h6>
   )}
 </main>
+
 <article>
   <slot/>
 </article>
+
 </Layout>
 
 <style>
   h6 {
     font-size: 1.25em;
-    font-style: italic;
+    /*font-style: italic;*/
   }
 </style>
