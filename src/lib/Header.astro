@@ -27,15 +27,18 @@
     background-repeat: no-repeat;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    margin-inline: auto;
     line-height: 1.15;
   }
   header div {
     width: min(100%, 128ch);
+    max-width: max-content;
+    overflow-x: auto;
     margin-inline: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    /*justify-content: center;*/
   }
   header div > a:first-of-type {
     flex-grow: 0;
