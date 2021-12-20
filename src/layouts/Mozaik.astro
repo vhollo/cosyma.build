@@ -39,7 +39,7 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
 </article>
 
 <main>
-  {posts.map((item) => item.published !== false && (
+  {posts?.map((item) => item.published !== false && (
     <a href={item.weblink || item.url} class={item.index}>
       <aside>
         <h1>{item.title}</h1>
@@ -57,14 +57,14 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
 </Layout>
 
 <style>
-  @media all and (min-width: 65ch) {
+  /*@media all and (min-width: 65ch) {*/
     main {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(32ch, 1fr));
       gap: 1.5rem;
       grid-auto-flow: dense;
     }
-  }
+  /*}*/
   a {
     /*flex-basis: 100%;*/
     /*width: 64ch;*/
@@ -88,6 +88,7 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
   a:hover {
     transform: scale(1.05);
   }
+
   /*main > *:nth-child(odd) {
     background-color:lightblue;
     margin-left: auto;
@@ -96,12 +97,15 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
     background-color: aliceblue;
     margin-right: auto;
   }*/
+
   a:last-child {
     padding-bottom: 5vh;
   }
+
   /*aside {
     position: relative;
   }*/
+
   a:last-child > button {
     bottom: 3vh;
   }
@@ -113,12 +117,12 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
   }
 
   h4 {
-    /*margin-bottom: var(--spacer);*/
     padding: 2vh 4vw;
   }
   blockquote {
     border-bottom: 2px solid;
   }
+  
   /*button {
     position: absolute;
     bottom: 8vh;
