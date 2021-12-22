@@ -1,6 +1,6 @@
 ---
 import Mozaik from '$layouts/Mozaik.astro'
-import Markdown from 'astro/components'
+/*import Markdown from 'astro/components'*/
 
 // Component Imports
 // import Header from '$lib/Header.astro'
@@ -15,7 +15,7 @@ import Markdown from 'astro/components'
 const posts = Astro.fetchContent('./*.md').sort((a, b) => a.date?.localeCompare(b.date))
 const firstPost = Astro.fetchContent('./about.md')
 const post = firstPost[0]
-console.log({post})
+//console.log({post})
 
 //const { content } = Astro.props
 // Full Astro Component Syntax:
