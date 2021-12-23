@@ -1,26 +1,46 @@
 ---
 label: General
 hide_body: false
+display_field: title
 fields:
 - type: datetime
   name: date
-  label: Expiration date
+  label: Publish date
   config:
     date_format: YYYY-MM-DD
     export_format: YYYY-MM-DD
-  default: '9999-12-30'
+    required: true
+  default: now
+- name: published
+  type: boolean
+  label: Published
+  default: true
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: text
   name: subtitle
-  label: subtitle
+  label: Subtitle
 - type: text
   name: folder
   label: Folder
-- type: text
-  name: layout
-  label: layout
+- name: layout
+  type: select
+  default: "$layouts/Page.astro"
+  config:
+    required: false
+    options:
+    - "$layouts/Page.astro"
+    - "$layouts/Mozaik.astro"
+    - "$layouts/Timeline.astro"
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
 - type: field_group
   name: image
   label: image
