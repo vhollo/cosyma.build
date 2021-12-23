@@ -23,6 +23,13 @@ fields:
 - type: text
   name: subtitle
   label: Subtitle
+- type: textarea
+  name: summary
+  label: Summary
+  config:
+    wysiwyg: true
+    schema:
+      format: html
 - type: text
   name: folder
   label: Folder
@@ -50,7 +57,7 @@ fields:
     source:
       type: pages
       section: ''
-      file: 
+      file: src/pages/about/tanari-kar.md
       path: 
   label: Weblink
 - type: field_group
@@ -75,9 +82,6 @@ fields:
       schema:
         format: html
     label: Caption
-- type: textarea
-  name: summary
-  label: summary
 - type: field_group_list
   name: timeline
   label: Timeline
