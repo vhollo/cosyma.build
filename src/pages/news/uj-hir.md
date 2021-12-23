@@ -2,7 +2,7 @@
 date: 2021-12-23
 published: true
 layout: "$layouts/Page.astro"
-weblink: []
+weblink: src/pages/news/uj-hir.md
 title: Új hír
 subtitle: ''
 summary: ''
