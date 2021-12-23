@@ -9,11 +9,15 @@ sections:
   label: News
   create: all
   match: "**/*.md"
+  templates:
+  - general
 - type: directory
   path: src/pages/about
   label: About
   create: all
   match: "**/*.md"
+  templates:
+  - general
 upload_dir: public/assets
 public_path: "/assets"
 front_matter_path: ''
