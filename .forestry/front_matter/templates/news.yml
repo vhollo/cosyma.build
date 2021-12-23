@@ -1,4 +1,21 @@
 ---
 label: News
 hide_body: true
-fields: []
+fields:
+- name: image
+  type: field_group
+  config: {}
+  fields:
+  - name: path
+    type: text
+    config:
+      required: false
+    label: Path
+    hidden: true
+    default: news
+  - name: src
+    type: file
+    config:
+      maxSize: 64
+    label: src
+  label: News Image
