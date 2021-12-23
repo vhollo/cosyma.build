@@ -41,6 +41,18 @@ fields:
       file: 
       path: 
   label: Layout
+- name: weblink
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: ''
+      file: 
+      path: 
+  label: Weblink
 - type: field_group
   name: image
   label: image
