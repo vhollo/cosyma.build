@@ -4,7 +4,11 @@ hide_body: false
 fields:
 - type: datetime
   name: date
-  label: date
+  label: Expiration date
+  config:
+    date_format: YYYY-MM-DD
+    export_format: YYYY-MM-DD
+  default: '9999-12-30'
 - type: text
   name: title
   label: title
@@ -13,7 +17,7 @@ fields:
   label: subtitle
 - type: text
   name: folder
-  label: folder
+  label: Folder
 - type: text
   name: layout
   label: layout
@@ -35,8 +39,28 @@ fields:
   label: summary
 - type: field_group_list
   name: timeline
-  label: timeline
+  label: Timeline
   fields:
+  - name: date
+    type: datetime
+    label: Date from
+    description: ''
+    config:
+      required: false
+      date_format: YYYY-MM-DD
+      time_format: 
+      display_utc: false
+      export_format: YYYY-MM-DD
+  - name: date2
+    type: datetime
+    label: Date to
+    description: ''
+    config:
+      required: false
+      date_format: YYYY-MM-DD
+      time_format: 
+      display_utc: false
+      export_format: YYYY-MM-DD
   - type: field_group
     name: detail
     label: detail
