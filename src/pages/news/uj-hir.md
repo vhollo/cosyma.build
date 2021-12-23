@@ -6,7 +6,7 @@ weblink: []
 title: Új hír
 subtitle: ''
 summary: ''
-folder: ''
+folder: news
 image:
   src: "/assets/20181024hamar-zsolt-filharmonikusok-zene2.jpg"
   hero: true
