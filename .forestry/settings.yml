@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: src/pahes/news
+  path: src/pages/news
   label: News
   create: all
   match: "**/*.md"
