@@ -1,0 +1,52 @@
+---
+label: General
+hide_body: false
+fields:
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: title
+  label: title
+- type: text
+  name: subtitle
+  label: subtitle
+- type: text
+  name: folder
+  label: folder
+- type: text
+  name: layout
+  label: layout
+- type: field_group
+  name: image
+  label: image
+  fields:
+  - type: file
+    name: src
+    label: src
+  - type: boolean
+    name: hero
+    label: hero
+  - type: boolean
+    name: preview
+    label: preview
+- type: textarea
+  name: summary
+  label: summary
+- type: field_group_list
+  name: timeline
+  label: timeline
+  fields:
+  - type: field_group
+    name: detail
+    label: detail
+    fields:
+    - type: textarea
+      name: hu
+      label: hu
+    - type: textarea
+      name: de
+      label: de
+    - type: textarea
+      name: en
+      label: en
