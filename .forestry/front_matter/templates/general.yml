@@ -1,0 +1,142 @@
+---
+label: General
+hide_body: false
+display_field: title
+fields:
+- type: datetime
+  name: date
+  label: Publish date
+  config:
+    date_format: YYYY-MM-DD
+    export_format: YYYY-MM-DD
+    required: true
+  default: now
+- name: published
+  type: boolean
+  label: Published
+  default: true
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: subtitle
+  label: Subtitle
+- type: textarea
+  name: summary
+  label: Summary
+  config:
+    wysiwyg: true
+    schema:
+      format: html
+- type: text
+  name: folder
+  label: Folder
+- name: layout
+  type: select
+  default: "$layouts/Page.astro"
+  config:
+    required: false
+    options:
+    - "$layouts/Page.astro"
+    - "$layouts/Mozaik.astro"
+    - "$layouts/Timeline.astro"
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
+- name: weblink
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: ''
+      file: src/pages/about/tanari-kar.md
+      path: 
+  label: Weblink
+- type: field_group
+  name: image
+  label: image
+  fields:
+  - type: file
+    name: src
+    label: src
+  - type: boolean
+    name: hero
+    label: hero
+  - type: boolean
+    name: preview
+    label: preview
+  - name: caption
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html
+    label: Caption
+- type: field_group_list
+  name: timeline
+  label: Timeline
+  fields:
+  - name: date
+    type: datetime
+    label: Date from
+    description: ''
+    config:
+      required: false
+      date_format: YYYY-MM-DD
+      time_format: 
+      display_utc: false
+      export_format: YYYY-MM-DD
+  - name: date2
+    type: datetime
+    label: Date to
+    description: ''
+    config:
+      required: false
+      date_format: YYYY-MM-DD
+      time_format: 
+      display_utc: false
+      export_format: YYYY-MM-DD
+  - type: field_group
+    name: detail
+    label: detail
+    fields:
+    - type: textarea
+      name: hu
+      label: hu
+    - type: textarea
+      name: de
+      label: de
+    - type: textarea
+      name: en
+      label: en
+  - name: image
+    type: field_group
+    config: {}
+    fields:
+    - name: src
+      type: file
+      config:
+        maxSize: 64
+      label: src
+    - name: caption
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: true
+        schema:
+          format: html
+      label: Caption
+    label: Image
+pages:
+- src/pages/news/uj-hir.md
