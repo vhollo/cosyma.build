@@ -21,3 +21,4 @@ fields:
   label: News Image
 pages:
 - src/pages/news/News-news.md
+- src/pages/news/filhar.md
