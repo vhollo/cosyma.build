@@ -138,5 +138,3 @@ fields:
           format: html
       label: Caption
     label: Image
-pages:
-- src/pages/news/uj-hir.md
