@@ -92,20 +92,20 @@ fields:
     description: ''
     config:
       required: false
-      date_format: YYYY-MM-DD
+      date_format: YYYY
       time_format: 
       display_utc: false
-      export_format: YYYY-MM-DD
+      export_format: YYYY
   - name: date2
     type: datetime
     label: Date to
     description: ''
     config:
       required: false
-      date_format: YYYY-MM-DD
+      date_format: YYYY
       time_format: 
       display_utc: false
-      export_format: YYYY-MM-DD
+      export_format: YYYY
   - type: field_group
     name: detail
     label: detail
