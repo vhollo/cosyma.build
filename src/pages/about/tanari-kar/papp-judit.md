@@ -3,7 +3,7 @@ title: Papp Judit
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: papp-judit.jpg
+  src: about/papp-judit.jpg
   hero: true
   preview: true
 subtitle: „Marketing és karmester”

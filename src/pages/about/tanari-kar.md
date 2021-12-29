@@ -5,7 +5,7 @@ folder: about
 layout: $layouts/Mozaik.astro
 weblink: /about/tanari-kar
 image:
-  src: Tanari-kar-SH.jpg
+  src: about/Tanari-kar-SH.jpg
   hero: true
   preview: true
 index: double

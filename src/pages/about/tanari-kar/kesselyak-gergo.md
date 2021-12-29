@@ -3,7 +3,7 @@ title: Kesselyák Gergely
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: kesselyak-gergo.jpg
+  src: about/kesselyak-gergo.jpg
   hero: true
   preview: true
 subtitle: Karmesteri Konzultáció

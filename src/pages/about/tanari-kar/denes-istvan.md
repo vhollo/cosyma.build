@@ -4,7 +4,7 @@ subtitle: Karmesteri Konzultáció
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: denes-istvan.jpg
+  src: about/denes-istvan.jpg
   hero: true
   preview: true
 ---

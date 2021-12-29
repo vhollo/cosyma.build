@@ -3,7 +3,7 @@ title: Horváth Zsolt
 folder: about
 layout: $layouts/Page.astro
 image:
-  src: horvath-zsolt.jpg
+  src: about/horvath-zsolt.jpg
   hero: true
   preview: true
 subtitle: „Intendáns és karmester”

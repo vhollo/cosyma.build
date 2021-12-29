@@ -3,7 +3,7 @@ title: Erdei Péter
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: erdei-peter.jpg
+  src: about/erdei-peter.jpg
   hero: true
   preview: true
 subtitle: Karvezetés

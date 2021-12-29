@@ -3,7 +3,7 @@ title: Körner Tamás
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: korner-tamas.jpg
+  src: about/korner-tamas.jpg
   hero: true
   preview: true
 subtitle: „Impresszárió és karmester”

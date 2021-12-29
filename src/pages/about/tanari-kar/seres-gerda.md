@@ -3,7 +3,7 @@ title: Seres Gerda
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: seres-gerda.jpg
+  src: about/seres-gerda.jpg
   hero: true
   preview: true
 subtitle: „Sajtó és karmester”

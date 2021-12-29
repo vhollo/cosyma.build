@@ -3,7 +3,7 @@ title: Keller András
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: keller-andras.jpg
+  src: about/keller-andras.jpg
   hero: true
   preview: true
 subtitle: „Analízis és interpretáció”

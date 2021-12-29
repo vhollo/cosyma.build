@@ -3,7 +3,7 @@ title: Vashegyi György
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: vashegyi-gyorgy.jpg
+  src: about/vashegyi-gyorgy.jpg
   hero: true
   preview: true
 subtitle: „Zene és notáció”

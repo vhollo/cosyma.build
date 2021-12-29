@@ -4,7 +4,7 @@ title: Helyszínünk
 folder: news
 layout: $layouts/Page.astro
 image:
-  src: Hubay_fotok_129-2048x1366.jpg
+  src: news/Hubay_fotok_129-2048x1366.jpg
   hero: true
   preview: true
 index: true

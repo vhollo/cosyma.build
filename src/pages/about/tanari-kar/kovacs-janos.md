@@ -3,7 +3,7 @@ title: Kovács János
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: kovacs-janos.jpg
+  src: about/kovacs-janos.jpg
   hero: true
   preview: true
 subtitle: Karmesteri Konzultáció

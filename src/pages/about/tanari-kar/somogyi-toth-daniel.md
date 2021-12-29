@@ -3,7 +3,7 @@ title: Somogyi-Tóth Dániel
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: somogyi-toth-daniel.jpg
+  src: about/somogyi-toth-daniel.jpg
   hero: true
   preview: true
 subtitle: „Intendáns és karmester”

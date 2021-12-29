@@ -3,7 +3,7 @@ title: Dr. Gyimesi László
 folder: about
 layout: $layouts/Page.astro
 image:
-  src: gyimesi-laszlo.jpg
+  src: about/gyimesi-laszlo.jpg
   hero: true
   preview: true
 subtitle: „Jogok és kötelezettségek”

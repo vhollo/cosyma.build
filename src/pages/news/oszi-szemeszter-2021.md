@@ -4,7 +4,7 @@ title: A 2021. őszi szemeszter osztálya
 folder: news
 layout: $layouts/Page.astro
 image:
-  src: osztaly_bemutatasa-2048x1448.png
+  src: news/osztaly_bemutatasa-2048x1448.png
   hero: true
   preview: true
 index: double

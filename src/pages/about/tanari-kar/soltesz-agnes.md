@@ -3,7 +3,7 @@ title: Soltész Ágnes
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: soltesz-agnes.jpg
+  src: about/soltesz-agnes.jpg
   hero: true
   preview: true
 subtitle: „Próbatechnika és hangszertechnika”

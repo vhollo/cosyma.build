@@ -1,11 +1,13 @@
 ---
-const { folder, image } = Astro.props
+const { image } = Astro.props
 const { src , caption } = image || {}
 //console.log('IMAGE', folder, caption)
-let path = `/assets/${folder}/${src}`
+//let path = `/assets/${folder}/${src}`
+let path = `/assets/${src}`
 let lang = 'hu'
 ---
-{folder && src && 
+<!--{folder && src && -->
+{src && 
   <figure>
     <img loading="lazy" src={path} alt=""/>
     {!!caption && <figcaption lang={lang}>{caption}</figcaption>}
@@ -14,7 +16,10 @@ let lang = 'hu'
 
 <style>
 	figure {
-		max-width: var(--figurewidth, 64ch);
-		margin: 1rem auto 2rem;
+    max-width: var(--figurewidth, 100%);
+		margin: 1rem auto 1rem;
+	}
+	img {
+		margin: 0 0 1rem;
 	}
 </style>

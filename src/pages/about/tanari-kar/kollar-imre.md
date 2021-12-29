@@ -3,7 +3,7 @@ title: Kollár Imre
 folder: about
 layout: $layouts/Timeline.astro
 image:
-  src: kollar-imre.jpg
+  src: about/kollar-imre.jpg
   hero: true
   preview: true
 subtitle: Karmesteri Konzultáció

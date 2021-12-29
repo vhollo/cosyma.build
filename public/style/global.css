@@ -23,7 +23,7 @@
   --gutterz: calc(var(--gutter) / 8);
   --spacer: calc(4 * var(--gutter));
 
-  --figurewidth: 64ch;
+  /*--figurewidth: 72ch;*/
 
   --darkgray: #0f2537;
   --midtone: #1f4667;
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5 {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.25em;
-  margin: .67em auto;
+  /*margin: .67em auto;*/
   color: var(--midtone, #1f4667);
 }
 /*h1 {

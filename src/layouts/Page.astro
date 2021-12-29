@@ -11,10 +11,11 @@ import Image from '../lib/Image.astro'
 // All variables are available to use in the HTML template below.
 
 let lang = 'hu'
-const { title, subtitle, summary, image, folder, content } = Astro.props
+const { title, subtitle, summary, image, content } = Astro.props
 //console.log('PAGE',content.image)
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+
 ---
 
 <!--
@@ -31,12 +32,12 @@ const { title, subtitle, summary, image, folder, content } = Astro.props
   {(title || content?.title) && (
   <h1>{title || content?.title}</h1>
   )}
-  <Image folder={folder || content?.folder} image={image || content?.image}/>
+  <Image image={image || content?.image} />
   {(subtitle || content?.subtitle) && (
   <h2>{subtitle || content?.subtitle}</h2>
   )}
   {(summary || content?.summary) && (
-    <h6>{summary || content?.summary}</h6>
+    <h3>{summary || content?.summary}</h3>
   )}
 </main>
 
@@ -47,7 +48,11 @@ const { title, subtitle, summary, image, folder, content } = Astro.props
 </Layout>
 
 <style>
-  h6 {
-    font-size: 1.25em;
+  /*main {
+    --figurewidth: 80ch;
+  }*/
+  h1, h2, h3 {
+    /*font-size: 1.25em;*/
+    text-align: center;
   }
 </style>

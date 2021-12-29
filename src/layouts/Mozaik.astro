@@ -13,28 +13,29 @@ import { Markdown } from 'astro/components'
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
 
-const { posts, summaryfrom, title, subtitle, summary, image, folder, content } = Astro.props
+const { post, posts, summaryfrom, title, subtitle, summary, image, content } = Astro.props
 //console.log(posts)
 //console.log('MOZAIK', Astro.props)
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<Layout {...Astro.props} meta={title || content?.title}>
+<Layout {...Astro.props} meta={title || content?.title || post?.title}>
 
 {(title || content?.title) && (
-<h1>{title || content?.title}</h1>
+<h1>{title || content?.title || post?.title}</h1>
 )}
-<Image folder={folder || content?.folder} image={image || content?.image}/>
-{(subtitle || content?.subtitle) && (
-<h2>{subtitle || content?.subtitle}</h2>
+<Image image={image || content?.image || post?.image}/>
+{(subtitle || content?.subtitle || post?.subtitle) && (
+<h2>{subtitle || content?.subtitle || post?.subtitle}</h2>
 )}
-{(summary || content?.summary) && (
-  <h4><Markdown content={summary || content?.summary}/></h4>
+{(summary || content?.summary || post?.summary) && (
+  <h3><Markdown content={summary || content?.summary || post?.summary}/></h3>
 )}
 
 <article>
-  <!--<h1>ARTICLE</h1>-->
+  {post?.astro.html && 
+  post.astro.html}
   <slot/>
 </article>
 
@@ -58,6 +59,9 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
 
 <style>
   @media all and (min-width: 65ch) {
+    :root {
+      --figurewidth: 80ch;
+    }
     main {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(32ch, 1fr));
@@ -81,12 +85,14 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
     display: block;
 
     background-color: aliceblue;
+    box-shadow: lightgrey 0 0 .5rem;
   }
   a.double {
     grid-column-end: span 2;
+    /*grid-row-end: span 2;*/
   }
   a:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
   }
 
   /*main > *:nth-child(odd) {
@@ -116,8 +122,9 @@ const { posts, summaryfrom, title, subtitle, summary, image, folder, content } =
     left: 4vw;
   }
 
-  h4 {
-    padding: 2vh 4vw;
+  h3 {
+    /*padding: 2vh 4vw;*/
+    text-align: center;
   }
   blockquote {
     border-bottom: 2px solid;

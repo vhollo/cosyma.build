@@ -88,7 +88,7 @@ timeline:
 
 				Dolgozott együtt Lord Yehudi Menuhinnal a Zene Világnapi gálakoncertjén. Később Menuhin azt írta: <q>Ő az egyik legdinamikusabb, legpontosabb, intelligensebb fiatal karmester, akit hallottam.</q>"
     image:
-      src: 1200px-yehudi_menuhin_1976.jpg
+      src: about/1200px-yehudi_menuhin_1976.jpg
       caption:
         en: 'Yehudi Menuhin 1976<br><a href="https://commons.wikimedia.org/wiki/File:Yehudi_Menuhin_1976.jpg" title="via Wikimedia Commons">Allan warrenderivative work: Parzi</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>'
         de: 'Yehudi Menuhin 1976<br><a href="https://commons.wikimedia.org/wiki/File:Yehudi_Menuhin_1976.jpg" title="via Wikimedia Commons">Allan warrenderivative work: Parzi</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>'
