@@ -65,7 +65,6 @@ const { post, posts, summaryfrom, title, subtitle, summary, image, content } = A
     main {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(32ch, 1fr));
-      gap: 1.5rem;
       grid-auto-flow: dense;
     }
   }
@@ -78,11 +77,12 @@ const { post, posts, summaryfrom, title, subtitle, summary, image, content } = A
     min-width: 32%;*/
 
     /*margin-bottom: -5vh;*/
-    padding: 0 1vw /*12vh*/;
+    padding: 0 2vw /*12vh*/;
     box-sizing: content-box;
     transition: all .25s;
     position: relative;
     display: block;
+    border-radius: 0.35rem;
 
     background-color: aliceblue;
     box-shadow: lightgrey 0 0 .5rem;
@@ -93,6 +93,7 @@ const { post, posts, summaryfrom, title, subtitle, summary, image, content } = A
   }
   a:hover {
     transform: scale(1.025);
+    box-shadow: lightgrey 0 0 1rem;
   }
 
   /*main > *:nth-child(odd) {

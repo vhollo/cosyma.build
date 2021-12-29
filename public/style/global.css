@@ -39,16 +39,18 @@
   font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
   /*font-size: clamp(1rem, 1rem + 1.0309vw + var(--user-font-scale), 1.125rem);*/
 }
-
+html {
+  /*background: hsl(207, 54%, 96%);*/
+}
 body {
+  background: radial-gradient(circle, hsl(207, 54%, 96%) 0%, #f9fafb 50%, hsl(207, 54%, 92%) 100%);
   min-height: 100vh;
   margin-inline: auto;
 /*display: grid;
   justify-content: center;*/
-  background: var(--light, #f9fafb);
   color: var(--dark, #111827);
   filter: hue-rotate(5deg) contrast(1.1);
-  background: radial-gradient(circle, #e2e8f0 0%, #f9fafb 50%, #e2e8f0 100%);
+  padding-top: 1rem;
 }
 
 /*@media (prefers-color-scheme: dark) {
@@ -63,10 +65,11 @@ main {
   margin-inline: auto;
   line-height: 1.65;
   display: flex;
+  gap: 1.5rem;
   /*flex-wrap: wrap;*/
   flex-direction: column;
   /*align-items: center;*/
-  padding: var(--spacer) var(--gutter) var(--gutter);
+  padding: var(--spacer) var(--gutterx) var(--gutter);
 }
 article {
   width: min(100%, 80ch);
