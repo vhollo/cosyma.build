@@ -1,7 +1,7 @@
 ---
 const { image } = Astro.props
 const { src , caption } = image || {}
-//console.log('IMAGE', folder, caption)
+console.log('IMAGE', caption)
 //let path = `/assets/${folder}/${src}`
 let path = `/assets/${src}`
 let lang = 'hu'
@@ -10,7 +10,7 @@ let lang = 'hu'
 {src && 
   <figure>
     <img loading="lazy" src={path} alt=""/>
-    {!!caption && <figcaption lang={lang}>{caption}</figcaption>}
+    {!!caption && <figcaption lang={lang}>{caption[lang] || caption[0]}</figcaption>}
   </figure>
 }
 

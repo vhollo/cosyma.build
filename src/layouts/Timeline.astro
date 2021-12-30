@@ -29,7 +29,7 @@ const { timeline } = content
 		<dt><date>{item.date}{item.date2 ? '–' + item.date2 : ''}</date></dt>
 		<dd lang={lang}>
 			{item.detail[lang]}
-			{item.image && <Image folder={content.folder} image={item.image}/>}
+			{item.image && <Image image={item.image}/>}
 		</dd>
 		</Fragment>
 	))}
