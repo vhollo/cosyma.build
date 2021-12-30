@@ -90,9 +90,9 @@ timeline:
     image:
       src: about/1200px-yehudi_menuhin_1976.jpg
       caption:
-        en: 'Yehudi Menuhin 1976<br><a href="https://commons.wikimedia.org/wiki/File:Yehudi_Menuhin_1976.jpg" title="via Wikimedia Commons">Allan warrenderivative work: Parzi</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>'
-        de: 'Yehudi Menuhin 1976<br><a href="https://commons.wikimedia.org/wiki/File:Yehudi_Menuhin_1976.jpg" title="via Wikimedia Commons">Allan warrenderivative work: Parzi</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>'
-        hu: 'Yehudi Menuhin 1976<br><a href="https://commons.wikimedia.org/wiki/File:Yehudi_Menuhin_1976.jpg" title="via Wikimedia Commons">Allan warrenderivative work: Parzi</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>'
+        en: 'Yehudi Menuhin 1976<br><a rel="external noopener" target="_blank" href="https://commons.wikimedia.org/wiki/File:Yehudi_Menuhin_1976.jpg" title="via Wikimedia Commons">Allan warrenderivative work: Parzi</a> /<a rel="external noopener" target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>'
+        de: 'Yehudi Menuhin 1976<br><a rel="external noopener" target="_blank" href="https://commons.wikimedia.org/wiki/File:Yehudi_Menuhin_1976.jpg" title="via Wikimedia Commons">Allan warrenderivative work: Parzi</a> /<a rel="external noopener" target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>'
+        hu: 'Yehudi Menuhin 1976<br><a rel="external noopener" target="_blank" href="https://commons.wikimedia.org/wiki/File:Yehudi_Menuhin_1976.jpg" title="via Wikimedia Commons">Allan warrenderivative work: Parzi</a> /<a rel="external noopener" target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>'
   - date: "1996"
     date2: "1997"
     detail:
