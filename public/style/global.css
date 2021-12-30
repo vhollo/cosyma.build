@@ -83,6 +83,14 @@ article {
 article > :first-child {
   padding-top: var(--spacer);
 }
+article > :first-child::first-letter {
+  /*color: blue;*/
+  font-size: 2em;
+  font-weight: 100;
+  vertical-align: bottom;
+  line-height: 1em;
+  font-family: "Silk Serif Regular", serif;
+}
 article > :last-child {
   padding-bottom: var(--gutter);
 }
@@ -130,7 +138,7 @@ h1, h2, h3, h4, h5 {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.25em;
-  /*margin: .67em auto;*/
+  padding-inline: 0.5rem;
   color: var(--midtone, #1f4667);
 }
 /*h1 {
@@ -174,4 +182,8 @@ p a {
 
 p {
   width: inherit;
+}
+
+span {
+  display: inline;
 }

@@ -8,7 +8,7 @@ image:
   hero: true
   preview: true
 index: double
-summary: Tíz Ifjú Maestro nyert felvételt hamarosan induló kurzusunkra, akikkel már nagyon várjuk a közös munkát.
+subtitle: Tíz Ifjú Maestro nyert felvételt hamarosan induló kurzusunkra, akikkel már nagyon várjuk a közös munkát.
 ---
 A felvett Ifjú Maestro-k:
 

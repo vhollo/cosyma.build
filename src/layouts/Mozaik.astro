@@ -26,6 +26,7 @@ const { post, posts, summaryfrom, title, subtitle, summary, image, content } = A
 <h1>{title || content?.title || post?.title}</h1>
 )}
 <Image image={image || content?.image || post?.image}/>
+
 {(subtitle || content?.subtitle || post?.subtitle) && (
 <h2>{subtitle || content?.subtitle || post?.subtitle}</h2>
 )}
@@ -136,4 +137,9 @@ const { post, posts, summaryfrom, title, subtitle, summary, image, content } = A
     bottom: 8vh;
   }*/
 
+	img {
+		margin: 0 0 1rem;
+    box-shadow: lightgrey 0 0 0.25rem;
+    border-radius: 0.125rem;
+	}
 </style>

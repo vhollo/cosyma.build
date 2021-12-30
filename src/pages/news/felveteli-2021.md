@@ -8,9 +8,8 @@ image:
   hero: true
   preview: true
 index: double
-summary: Érdekel a pálca varázsa vagy a pulpitus vonzereje?
-
-          Szeretnéd Magyarország vezető és kiemelkedő muzsikus személyiségeitől ellesni a karmesteri hivatás fortélyait?
+subtitle: Érdekel a pálca varázsa vagy a pulpitus vonzereje?
+summary: Szeretnéd Magyarország vezető és kiemelkedő muzsikus személyiségeitől ellesni a karmesteri hivatás fortélyait?
 
           Szeretnéd tovább mélyíteni zenei tudásodat?
 
