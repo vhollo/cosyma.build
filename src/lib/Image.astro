@@ -10,7 +10,7 @@ let lang = 'hu'
 {src && 
   <figure>
     <img loading="lazy" src={path} alt=""/>
-    {!!caption && <figcaption lang={lang}>{caption[lang] || caption[0]}</figcaption>}
+    {!!caption && <figcaption lang={lang}>{caption[lang] || caption}</figcaption>}
   </figure>
 }
 
