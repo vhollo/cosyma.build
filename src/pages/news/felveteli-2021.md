@@ -7,7 +7,7 @@ image:
   src: news/felvkiir_open.png
   hero: true
   preview: true
-index: double
+index: false
 subtitle: Érdekel a pálca varázsa vagy a pulpitus vonzereje?
 summary: Szeretnéd Magyarország vezető és kiemelkedő muzsikus személyiségeitől ellesni a karmesteri hivatás fortélyait?
 

@@ -10,7 +10,7 @@ import Mozaik from '$layouts/Mozaik.astro'
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
 
-const posts = Astro.fetchContent('./*.md').sort((b, a) => a.date?.localeCompare(b.date))
+const posts = Astro.fetchContent('./*.md').filter((post) => !post.index).sort((b, a) => a.date?.localeCompare(b.date))
 //const { content } = Astro.props
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
